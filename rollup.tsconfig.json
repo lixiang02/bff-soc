@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "target": "es5",
+    "moduleResolution": "node",
+    "module": "commonjs",     
+    "baseUrl": "./",
+    "paths": {
+      "@utils/*": ["src/utils/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "package": ["package.json"]
+    },
+    "plugins": [{ "transform": "typescript-transform-paths", "after": true }]
+  },
+  "compileOnSave": true,
+  "include":["handler.ts","src/**/*", "bin/*", "conf/*", "types/*", "package.json"],
+  "exclude": ["node_modules", "dist", "**/*.spec.js", "**/*.test.js"]
+}

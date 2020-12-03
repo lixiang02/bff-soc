@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "preserveConstEnums": true,
+    "allowJs": true,
+    "target": "es5",
+    "lib": ["dom", "es2015", "esnext"],
+    "moduleResolution": "node",
+    "module": "commonjs",     
+    "outDir": "dist",
+    "baseUrl": ".",
+    "declaration": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports":true,
+    "esModuleInterop": true         /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+  },
+  "compileOnSave": true,
+  "include": ["src", "types", "conf/config.json"],
+  "exclude": [ "node_modules", "dist", "**/*.spec.ts", "**/*.test.ts", "handler.ts", "conf/setupJest.ts"]
+}

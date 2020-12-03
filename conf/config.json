@@ -1,0 +1,14 @@
+{
+    "development": {
+        "port": 13003,
+        "httpsPort": 13004,
+        "host": "localhost",
+        "https": false
+    },
+    "production": {
+        "port": 13003,
+        "httpsPort": 13004,
+        "host": "localhost",
+        "https": false
+    }
+}

@@ -1,0 +1,24 @@
+stages:
+  - test
+
+cache:
+  key: ${CI_BUILD_REF_NAME}
+  paths:
+    - node_modules/
+    - dist/
+
+before_script:
+  - yarn --ignore-engines
+  - yarn build
+  - yarn test
+#  - nohup node dist/app.js > temp.log 2>&1 & echo $! > pidfile.txt
+
+#after_script:
+#  - kill -9 `cat pidfile.txt`
+
+test_job:
+  stage: test
+  script:
+    - yarn test
+  tags:
+    - master
